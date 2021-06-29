@@ -14,15 +14,15 @@ ALLOWED_HOSTS = ['127.0.0.1', '*']
 
 
 INSTALLED_APPS = [
-    'blog',
-    'crispy_forms',
-    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
+    'crispy_forms',
+    'users',
 ]
 
 MIDDLEWARE = [
