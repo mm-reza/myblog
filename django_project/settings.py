@@ -9,7 +9,6 @@ SECRET_KEY = 'SECRET_KEY'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '*']
-#ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 
@@ -22,12 +21,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'crispy_forms',
+   'crispy_bootstrap4',
     'users',
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -37,7 +38,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'django_project.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -108,7 +108,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 
-CRISPY_TEMPLETE_PACK = 'bootstrap4'
+
+# CRISPY_TEMPLATE_PACK = 'uni_form'
+
 
 LOGIN_REDIRECT_URL = 'blog-home'
 
