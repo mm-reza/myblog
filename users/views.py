@@ -43,3 +43,10 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+from django.contrib.auth import logout
+
+def custom_logout(request):
+    logout(request)
+    # Redirect to a custom URL after logout
+    return render(request, 'users/logout.html')
