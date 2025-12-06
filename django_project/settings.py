@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'SECRET_KEY'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '*']
 
@@ -24,7 +24,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'users',
 ]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -104,8 +105,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = BASE_DIR / 'static'
+MEDIA_DIR = BASE_DIR / 'media'
 MEDIA_ROOT = MEDIA_DIR
 
 
